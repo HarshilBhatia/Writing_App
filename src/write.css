@@ -1,0 +1,66 @@
+.container{
+    width:100%;
+    height:100vh;
+}
+
+.mode-btn{
+    margin-left: 90%;
+    display: block;
+    padding-top: 20px;
+    border: none;
+    text-align: right;
+    padding-right : 1rem;
+    font-size: 1rem;  
+    transition: hover 0.3s ease-in-out 0s;
+}
+
+.timer{
+    margin-right: 10px;
+    width:120;
+    position: absolute;
+    margin-top: 2rem;
+    left:3.5rem;
+    z-index:10;
+    height: 500px;
+}
+
+.mode-btn:hover{
+    cursor:pointer;
+    font-weight: 500;
+}
+
+.mode-btn:focus{
+    outline: 0;
+}
+
+textarea{
+    font-size: 25px;
+    position: absolute;
+    left:25%;
+    top:5rem;
+    width:50%;
+    right:25%;
+    height:65vh;
+    margin-left: auto;
+    margin-right:auto;
+    resize: none;
+    border:none;
+    font-weight: bold;
+    overflow: hidden;    
+    
+}
+
+textarea:focus{
+    outline: 0;
+}
+
+#t{
+    filter: blur(4px);
+}
+
+.progressbar{
+    margin-top:29rem;
+    margin-right: 20%;
+    margin-left: 20%;
+    background-color: hotpink;
+}

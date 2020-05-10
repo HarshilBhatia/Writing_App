@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Page from './page'
+import {BrowserRouter as Router, Route,Switch ,Link} from "react-router-dom"
+import Home from "./Home"
+import React, { Component } from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+
+  constructor(){
+    super()
+
+    this.state={
+      time:5,
+      zen:false
+    }
+
+    this.changeTime=this.changeTime.bind(this)
+    this.changeZen=this.changeZen.bind(this)
+  }
+
+  changeTime(t){
+    this.setState({time:t})
+  }
+
+  changeZen(v){
+    this.setState({zen:v})
+  }
+
+  render() {
+    return (
+      <Router>
+      <Route path="/write"  render={()=><Page totaltime={this.state.time} zen={this.state.zen}/>}/>
+      <Route exact path="/" render={()=><Home changetime={this.changeTime} changezen={this.changeZen}/>} />
+    
+      </Router>
+      
+    )
+  }
 }
 
-export default App;

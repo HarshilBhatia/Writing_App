@@ -1,0 +1,9 @@
+
+.wholescreen{
+    width: 100%;
+    z-index: 210;
+    position: absolute;
+
+    text-align: center;
+    font-size: 270px;
+}

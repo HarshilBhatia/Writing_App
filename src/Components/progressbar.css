@@ -1,0 +1,15 @@
+
+.progress-bar {
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background:rgb(187, 185, 185);
+  }
+  
+  .filler {
+    height: 100%;
+    transition: width .2s ease-in;
+    z-index: 2;
+  }
+ 
+ 
